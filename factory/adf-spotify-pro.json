@@ -1,0 +1,9 @@
+{
+	"name": "adf-spotify-pro",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "c9ac285a-b895-4182-bc27-bd420a878576",
+		"tenantId": "b343a8ac-6276-477a-8993-73e2f485bbf4"
+	}
+}
