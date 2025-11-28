@@ -144,7 +144,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"expression": {
-						"value": "@greater(activity('SQLservertoStorage').output,0 )",
+						"value": "@greater(activity('SQLservertoStorage').output.dataRead,0 )",
 						"type": "Expression"
 					},
 					"ifTrueActivities": [
