@@ -8,6 +8,11 @@
 				"dependsOn": [],
 				"userProperties": [],
 				"typeProperties": {
+					"items": {
+						"value": "@pipeline().parameters.loop_input",
+						"type": "Expression"
+					},
+					"isSequential": true,
 					"activities": [
 						{
 							"name": "SQLservertoStorage",
@@ -317,7 +322,8 @@
 		],
 		"parameters": {
 			"loop_input": {
-				"type": "string"
+				"type": "array",
+				"defaultValue": "SELECT * FROM @{item().schema}.@{item().table} WHERE @{item().cdc_col}>'@{if(empty(item().from_date),activity('last_cdc').output.value[0].cdc,item().from_date)}'"
 			}
 		},
 		"variables": {
